@@ -1,0 +1,142 @@
+.navber {
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navber .logo {
+  width: 150px;
+}
+
+.navber-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    font-size: 18px;
+    color: #49557e;
+}
+
+.navber-right {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.navber button {
+  background: transparent;
+  font-size: 16px;
+  color: #49557e;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 1px solid tomato;
+  padding: 10px 30px;
+  transition: 0.3s;
+}
+
+.navber button:hover{
+  background-color: #fff4f2;
+}
+
+.navber .active {
+  padding-bottom: 2px;
+  border-bottom: 2px solid #49557e;
+}
+
+.navber li{
+  cursor: pointer;
+}
+
+.navber-search-icon{
+  position: relative;
+}
+
+.navber-search-icon .dot{
+  position: absolute;
+  min-width: 10px;
+  min-height: 10px;
+  background-color: tomato;
+  border-radius: 5px;
+  top: -8px;
+  right: -8px;
+}
+.navabr-profile {
+    position: relative;
+}
+.navabr-profile-dropdown {
+    position: absolute;
+    display: none;
+    right: 0;
+    z-index: 1;
+}
+
+.navabr-profile:hover .navabr-profile-dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #fff2ef;
+    padding: 12px 25px;
+    border-radius: 4px;
+    border: 1px solid tomato;
+    outline: 2px solid white;
+    list-style: none;
+}
+.navabr-profile-dropdown li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+.navabr-profile-dropdown li:hover{
+    color: tomato;
+}
+.navabr-profile-dropdown img {
+    width: 20px;
+}
+
+@media (max-width:1050px) {
+  .navber .logo{
+    width: 140px;
+  }
+    .navbar-menu{
+      gap: 20px;
+      font-size: 17px;
+    }
+    .navber-right{
+      gap: 30px;
+    }
+    .navber-right img {
+      width:22px;
+    }
+    .navber-right button{
+      padding: 8px 25px;
+    }
+}
+
+@media (max-width:900px) {
+  .navber .logo{
+    width: 120px;
+  }
+  .navbar-menu{
+    gap: 15px;
+    font-size: 16px;
+  }
+  .navber-right{
+    gap: 20px;
+  }
+  .navber-right img {
+    width:20px;
+  }
+  .navber-right button{
+    padding: 7px 20px;
+    font-size: 15px;
+  }
+}
+@media (max-width:750px) {
+  
+  .navbar-menu li{
+    display: none;
+  }
+  
+}
+
