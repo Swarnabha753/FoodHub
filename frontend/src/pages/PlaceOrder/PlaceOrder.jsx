@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useContext, useState } from "react";
 import { StoreContext } from "../../context/StoreContext";
 import "./PlaceOrder.css";
@@ -33,7 +34,18 @@ export default function PlaceOrder() {
               orderItems.push(itemInfo);
             }
         })
-        console.log(orderItems);
+        let orderData = {
+          address: data,
+          items: orderItems,
+          amount:getTotalCartAmount()+2,
+        }
+        let response = await axios.post(url+"/api/order/place",orderData,{headers:{token}});
+        if(response.data.success) {
+            const {session_url} = response.data;
+            window.location.replace(session_url);
+        } else {
+            console.log(response.status);
+        }
     }
 
     return (
