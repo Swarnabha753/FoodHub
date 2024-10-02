@@ -44,7 +44,7 @@ export default function PlaceOrder() {
             const {session_url} = response.data;
             window.location.replace(session_url);
         } else {
-            console.log(response.status);
+            alert("Error");
         }
     }
 
